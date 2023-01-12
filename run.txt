@@ -1,0 +1,9 @@
+FedCHAR:
+# attack = A4
+python main.py --optimizer=FedCHAR --dataset=WISDM --model=WISDM --eval_every=1 --participation_ratio=0.5 --corrupted_ratio=0.5 --batch_size=32 --learning_rate=0.01 --seed=0 --sampling=2 --lamda=1 --dynamic_lamda=0 --decay_factor=0 --corrupted_seed=42 --epoch=2 --initial_rounds=5 --remain_rounds=45 --num_of_clusters=2 --attack_type=A4
+# attack = Hybrid
+python main.py --optimizer=FedCHAR --dataset=WISDM --model=WISDM --eval_every=1 --participation_ratio=0.5 --corrupted_ratio=0.5 --batch_size=32 --learning_rate=0.01 --seed=0 --sampling=2 --lamda=1 --dynamic_lamda=0 --decay_factor=0 --corrupted_seed=42 --epoch=2 --initial_rounds=5 --remain_rounds=45 --num_of_clusters=2 --attack_type=Hybrid
+
+FedCHAR-DC:
+# attack = A4
+python main.py --optimizer=FedCHAR-DC --dataset=WISDM --model=WISDM --eval_every=1 --participation_ratio=0.5 --corrupted_ratio=0.5 --batch_size=32 --learning_rate=0.01 --seed=0 --sampling=2 --lamda=1 --dynamic_lamda=0 --decay_factor=0 --corrupted_seed=42 --epoch=2  --initial_rounds=5 --remain_rounds=45 --num_of_clusters=2 --attack_type=A4

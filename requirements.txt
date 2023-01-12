@@ -1,0 +1,5 @@
+tensorflow-gpu==2.5.3
+scipy
+scikit-learn
+matplotlib
+tqdm

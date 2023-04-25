@@ -1,5 +1,7 @@
 # Hierarchical Clustering-based Personalized Federated Learning for Robust and Fair Human Activity Recognition
 
+**News: **PyTorch Version is comming soon :)
+
 This repository contains the code for our paper that has been accepted by **Ubicomp/IMWUT 2023**:
 
 > [Hierarchical Clustering-based Personalized Federated Learning for Robust and Fair Human Activity Recognition](https://dl.acm.org/doi/10.1145/3580795)

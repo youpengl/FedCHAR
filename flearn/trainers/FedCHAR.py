@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from tqdm import tqdm
 import tensorflow.compat.v1 as tf
@@ -546,6 +547,9 @@ class Server(BaseFedarated):#------------1
         CMR = CMN.astype('float') / CMN.sum(axis=1)[:, np.newaxis]
         CMR = np.around(CMR, decimals=2)
         print("[ACC]Confusion Matrix:\n ", CMR)
+
+        if not os.path.exists('./record/Dataset/{}'.format(self.dataset)):
+            os.makedirs('./record/Dataset/{}'.format(self.dataset))
 
         np.savez('./record/Dataset/{}/FedCHAR_ir{}_rr{}_c{}_pr{}_atk{}_cr{}_lr{}_bz{}_ep{}_R{}_lkg{}_lamda{}.npz'.format(self.dataset,
                                                                                          self.initial_rounds,

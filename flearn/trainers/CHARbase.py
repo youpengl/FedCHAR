@@ -44,7 +44,8 @@ class BaseFedarated(object):
         if len(groups) == 0:
             groups = [None for _ in users]
         all_clients = [Client(u, g, train_data[u], test_data[u], dynamic_lam, model) for u, g in zip(users, groups)]
-
+        return all_clients
+    
     def train_error(self, models, group_c):
         num_samples = []
         tot_correct = []

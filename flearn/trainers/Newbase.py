@@ -110,6 +110,7 @@ class BaseFedarated(object):
             groups = [None for _ in users]
         all_clients = [Client(u, g, train_data[u], test_data[u], dynamic_lam, model) for u, g in zip(users, groups)]
 
+        return all_clients
     def test(self, models):
         '''tests self.latest_model on given clients
         '''

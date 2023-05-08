@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from tqdm import tqdm
 import tensorflow.compat.v1 as tf
@@ -338,7 +339,11 @@ class Server(BaseFedarated):#------------1
         test_loss_per_round = INFO[:, 3]
         variance_per_round = INFO[:, 4]
         benign_id = np.setdiff1d(range(len(self.clients)), corrupt_id)
-        np.savez('./record/Dataset/{}/FedNew_ir{}_rr{}_c{}_pr{}_atk{}_cr{}_lr{}_bz{}_ep{}_rc{}.npz'.format(self.dataset,
+
+        if not os.path.exists('./record/Dataset/{}'.format(self.dataset)):
+            os.makedirs('./record/Dataset/{}'.format(self.dataset))
+
+        np.savez('./record/Dataset/{}/FedCHAR_DC_ir{}_rr{}_c{}_pr{}_atk{}_cr{}_lr{}_bz{}_ep{}_rc{}.npz'.format(self.dataset,
                                                                                          self.initial_rounds,
                                                                                          self.remain_rounds,
                                                                                          self.num_of_clusters,

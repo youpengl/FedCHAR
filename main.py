@@ -135,10 +135,7 @@ def read_options():
     learner = getattr(mod, 'Model')
 
     # load selected trainer
-    if parsed['optimizer'] in ['L2SGD', 'Ditto', 'FedCHAR', 'FedNew']:
-        opt_path = 'flearn.trainers.%s' % parsed['optimizer']
-    else:
-        opt_path = 'flearn.trainers.%s' % parsed['optimizer']
+    opt_path = 'flearn.trainers.%s' % parsed['optimizer']
 
     mod = importlib.import_module(opt_path)
     optimizer = getattr(mod, 'Server')

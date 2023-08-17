@@ -1,0 +1,15 @@
+# torch1.9.0
+# cuda11.1
+scikit-learn
+h5py
+calmsize
+vpdb
+ujson
+opacus==1.1.0
+omegaconf
+wandb
+ujson
+seaborn
+matplotlib
+yagmail
+cvxpy

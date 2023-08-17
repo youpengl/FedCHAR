@@ -1,0 +1,33 @@
+# general
+dataset: "wisdm"
+partition: "nature"
+data_path: "./dataset/wisdm"
+algorithm: "FedCHAR_DC" 
+attack_type: "B" # A1: label_poison, A2: gaussian_attack, A3: scaling_attack, A4: reverse_attack
+attack_ratio: 0.0
+
+num_classes: 6
+batch_size: 10
+local_learning_rate: 0.01
+learning_rate_decay: False
+learning_rate_decay_gamma: 0.99
+
+global_rounds: 500
+local_steps: 1
+
+join_ratio: 0.5
+num_clients: 36
+future_test: True
+future_ratio: 0.2
+finetune_rounds: 10
+
+eval_gap: 1
+detailed_info: False
+
+# FedCHAR / FedCHAR-DC
+initial_rounds: 10
+n_clusters: 2
+metric: 'cosine'
+linkage: 'complete'
+recluster_rounds: 999
+mu: 1

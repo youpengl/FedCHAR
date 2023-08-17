@@ -1,0 +1,3 @@
+Replace this file with WISDM_ar_v1.1/WISDM_ar_v1.1_raw.txt.
+
+Download WISDM from https://www.cis.fordham.edu/wisdm/dataset.php

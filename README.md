@@ -1,6 +1,6 @@
 # Hierarchical Clustering-based Personalized Federated Learning for Robust and Fair Human Activity Recognition
 
-**News:** We have already released the initial PyTorch version (originally developed in TensorFlow).
+**News:** We have already released the initial [PyTorch version](https://github.com/youpengl/FedCHAR/tree/main/FedCHAR-PyTorch) (originally developed in [TensorFlow](https://github.com/youpengl/FedCHAR/tree/main/FedCHAR-TensorFlow)).
 
 This repository contains the code for our paper that has been accepted by **UbiComp/IMWUT 2023**:
 
